@@ -13,7 +13,7 @@ class GetLogger:
             # 设置日志器总级别
             cls.logger.setLevel(logging.INFO)
             # 处理器 -获取文件以时间分隔
-            tf = logging.handlers.TimedRotatingFileHandler(filename="./log/shirleyTest.log",
+            tf = logging.handlers.TimedRotatingFileHandler(filename="./log/66rpg.log",
                                                            when="midnight",
                                                            interval=1,
                                                            backupCount=3,
