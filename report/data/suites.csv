@@ -1,0 +1,4 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Tue Jul 18 16:25:13 CST 2023","Tue Jul 18 16:25:15 CST 2023","1835","scripts","test01_open_carcenter","TestOpenCarcenter","","","test_open_carcenter",""
+"passed","Tue Jul 18 16:02:40 CST 2023","Tue Jul 18 16:17:31 CST 2023","890890","","","","","","test_change_carcenter",""
+"passed","Tue Jul 18 16:25:25 CST 2023","Tue Jul 18 16:26:01 CST 2023","36595","scripts","test02_change_carcenter","TestChangeCarcenter","","","test_change_carcenter",""

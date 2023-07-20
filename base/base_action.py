@@ -1,11 +1,11 @@
 import time
-
+from selenium import webdriver
 from selenium.common.exceptions import TimeoutException, NoSuchElementException
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
+import allure
 
-
-class BaseAction:
+class BaseAction(object):
 
     def __init__(self, driver):
         self.driver = driver
@@ -179,3 +179,15 @@ class BaseAction:
                 return False
 
             time.sleep(poll)
+    # def get_screenshot_as_file(self):
+    #     """
+    #     截屏保存
+    #     :return:返回路径
+    #     """
+    #     pic_name = str.split(str(time.time()), '.')[0] + str.split(str(time.time()), '.')[1] + '.png'
+    #     screent_path = os.path.join(SCREENSHOTDIR, pic_name)
+    #     self.driver.get_screenshot_as_file(screent_path)
+    #     return screent_path
+    def screen(self,s):
+        if s is not None:
+            allure.attach(self.driver.get_screenshot_as_png(), s, allure.attachment_type.PNG)

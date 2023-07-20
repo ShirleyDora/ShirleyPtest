@@ -13,5 +13,5 @@ def analyze_data(file_name, key):
 
     with open(r".%sdata%s%s.yaml" % (os.sep, os.sep, file_name), "r",encoding="utf-8") as f:
         data_list = list()
-        data_list.extend(yaml.load(f)[key].values())
+        data_list.extend(yaml.safe_load(f)[key].values())
         return data_list

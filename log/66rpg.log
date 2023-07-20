@@ -1,0 +1,77 @@
+2023-07-18 12:10:18,835 WARNING [urllib3.connectionpool] [connectionpool.py (urlopen:871] - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002152934EC50>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session
+2023-07-18 12:10:20,882 WARNING [urllib3.connectionpool] [connectionpool.py (urlopen:871] - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002152934EF50>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session
+2023-07-18 12:10:23,106 WARNING [urllib3.connectionpool] [connectionpool.py (urlopen:871] - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002152934E3B0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session
+2023-07-18 12:10:28,102 WARNING [urllib3.connectionpool] [connectionpool.py (urlopen:871] - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002152A0CE620>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session
+2023-07-18 12:10:30,154 WARNING [urllib3.connectionpool] [connectionpool.py (urlopen:871] - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002152A0CE470>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session
+2023-07-18 12:10:32,181 WARNING [urllib3.connectionpool] [connectionpool.py (urlopen:871] - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002152A0CC0D0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session
+2023-07-18 12:10:36,390 WARNING [urllib3.connectionpool] [connectionpool.py (urlopen:871] - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002152A0BFE50>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session
+2023-07-18 12:10:38,410 WARNING [urllib3.connectionpool] [connectionpool.py (urlopen:871] - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002152A0BFD30>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session
+2023-07-18 12:10:40,437 WARNING [urllib3.connectionpool] [connectionpool.py (urlopen:871] - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002152A0BFAF0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /session
+2023-07-18 12:12:02,037 INFO [root] [carcenter_page.py (click_carcenter:23] - 正在点击车辆按钮
+2023-07-18 12:12:12,806 INFO [root] [carcenter_page.py (click_carcenter:23] - 正在点击车辆按钮
+2023-07-18 12:13:10,449 INFO [root] [carcenter_page.py (click_carcenter:23] - 正在点击车辆按钮
+2023-07-18 12:13:21,695 INFO [root] [carcenter_page.py (click_carcenter:23] - 正在点击车辆按钮
+2023-07-18 12:14:01,986 INFO [root] [carcenter_page.py (click_carcenter:23] - 正在点击车辆按钮
+2023-07-18 12:18:15,883 INFO [root] [carcenter_page.py (click_carcenter:15] - 正在点击车辆按钮
+2023-07-18 12:18:27,422 INFO [root] [carcenter_page.py (click_carcenter:15] - 正在点击车辆按钮
+2023-07-18 12:19:08,568 INFO [root] [carcenter_page.py (click_carcenter:15] - 正在点击车辆按钮
+2023-07-18 12:23:40,160 INFO [root] [carcenter_page.py (click_carcenter:15] - 正在点击车辆按钮
+2023-07-18 12:24:14,872 INFO [root] [carcenter_page.py (click_carcenter:15] - 正在点击车辆按钮
+2023-07-18 12:24:25,159 INFO [root] [carcenter_page.py (click_carcenter:15] - 正在点击车辆按钮
+2023-07-18 12:28:47,827 INFO [root] [carcenter_page.py (click_carcenter:15] - 正在点击车辆按钮
+2023-07-18 12:28:53,771 INFO [root] [carcenter_page.py (get_carcenter_txt:20] - 正在获取车辆详情页面状态
+2023-07-18 12:28:54,587 INFO [root] [test01_carcenter.py (test_carcenter:30] - 更新状态断言成功
+2023-07-18 13:47:06,106 INFO [root] [carcenter_page.py (click_carcenter:15] - 正在点击车辆按钮
+2023-07-18 13:47:47,006 INFO [root] [carcenter_page.py (click_carcenter:15] - 正在点击车辆按钮
+2023-07-18 13:47:58,361 INFO [root] [carcenter_page.py (click_carcenter:15] - 正在点击车辆按钮
+2023-07-18 14:12:46,063 INFO [root] [carcenter_page.py (click_carcenter:15] - 正在点击车辆按钮
+2023-07-18 14:13:12,696 INFO [root] [carcenter_page.py (click_carcenter:15] - 正在点击车辆按钮
+2023-07-18 14:13:44,040 INFO [root] [carcenter_page.py (click_carcenter:15] - 正在点击车辆按钮
+2023-07-18 14:15:23,810 INFO [root] [carcenter_page.py (click_carcenter:15] - 正在点击车辆按钮
+2023-07-18 14:15:24,990 INFO [root] [carcenter_page.py (get_carcenter_txt:21] - 正在获取车辆详情页面状态
+2023-07-18 14:15:25,517 INFO [root] [test01_carcenter.py (test_carcenter:31] - 更新状态断言成功
+2023-07-18 15:23:14,144 INFO [root] [carcenter_page.py (click_carcenter:15] - 正在点击车辆按钮
+2023-07-18 15:23:55,347 INFO [root] [carcenter_page.py (click_carcenter:15] - 正在点击车辆按钮
+2023-07-18 15:24:36,847 INFO [root] [carcenter_page.py (click_carcenter:15] - 正在点击车辆按钮
+2023-07-18 15:25:17,301 INFO [root] [carcenter_page.py (click_carcenter:15] - 正在点击车辆按钮
+2023-07-18 15:28:23,474 INFO [root] [carcenter_page.py (click_carcenter:15] - 正在点击车辆按钮
+2023-07-18 15:28:24,661 INFO [root] [carcenter_page.py (get_carcenter_txt:21] - 正在获取车辆详情页面状态
+2023-07-18 15:28:25,083 INFO [root] [test01_open_carcenter.py (test_open_carcenter:30] - 打开车辆，更新状态断言成功
+2023-07-18 15:28:35,116 INFO [root] [carcenter_page.py (click_carenergy:27] - 正在点击能量管理按钮
+2023-07-18 15:28:36,386 INFO [root] [carcenter_page.py (click_intelligent_drive:37] - 正在点击智能驾驶按钮
+2023-07-18 15:28:46,755 INFO [root] [carcenter_page.py (click_carenergy:27] - 正在点击能量管理按钮
+2023-07-18 15:28:49,792 INFO [root] [carcenter_page.py (click_intelligent_drive:37] - 正在点击智能驾驶按钮
+2023-07-18 15:28:59,858 INFO [root] [carcenter_page.py (click_carenergy:27] - 正在点击能量管理按钮
+2023-07-18 15:29:01,213 INFO [root] [carcenter_page.py (click_intelligent_drive:37] - 正在点击智能驾驶按钮
+2023-07-18 15:58:39,978 INFO [root] [carcenter_page.py (click_carcenter:20] - 正在点击车辆按钮
+2023-07-18 15:58:41,308 INFO [root] [carcenter_page.py (get_carcenter_txt:26] - 正在获取车辆详情页面状态
+2023-07-18 15:58:41,785 INFO [root] [test01_open_carcenter.py (test_open_carcenter:30] - 打开车辆，更新状态断言成功
+2023-07-18 15:59:24,032 INFO [root] [carcenter_page.py (click_carenergy:32] - 正在点击能量管理按钮
+2023-07-18 15:59:25,307 INFO [root] [carcenter_page.py (click_intelligent_drive:42] - 正在点击智能驾驶按钮
+2023-07-18 15:59:25,948 INFO [root] [carcenter_page.py (click_carbody:47] - 正在点击车身设置按钮
+2023-07-18 15:59:26,883 INFO [root] [carcenter_page.py (click_carsettings:52] - 正在点击通用设置按钮
+2023-07-18 15:59:29,046 INFO [root] [carcenter_page.py (click_carabout:57] - 正在点击关于本车按钮
+2023-07-18 15:59:30,854 INFO [root] [test02_change_carcenter.py (test_change_carcenter:40] - 切换车辆Tab栏，更新状态断言成功
+2023-07-18 16:02:28,360 INFO [root] [carcenter_page.py (click_carcenter:20] - 正在点击车辆按钮
+2023-07-18 16:02:30,003 INFO [root] [carcenter_page.py (get_carcenter_txt:26] - 正在获取车辆详情页面状态
+2023-07-18 16:02:30,465 INFO [root] [test01_open_carcenter.py (test_open_carcenter:30] - 打开车辆，更新状态断言成功
+2023-07-18 16:02:40,741 INFO [root] [carcenter_page.py (click_carenergy:32] - 正在点击能量管理按钮
+2023-07-18 16:17:45,079 INFO [root] [carcenter_page.py (click_carcenter:20] - 正在点击车辆按钮
+2023-07-18 16:17:45,892 INFO [root] [carcenter_page.py (get_carcenter_txt:26] - 正在获取车辆详情页面状态
+2023-07-18 16:17:46,982 INFO [root] [test01_open_carcenter.py (test_open_carcenter:30] - 打开车辆，更新状态断言成功
+2023-07-18 16:17:56,986 INFO [root] [carcenter_page.py (click_carenergy:32] - 正在点击能量管理按钮
+2023-07-18 16:18:03,256 INFO [root] [carcenter_page.py (click_intelligent_drive:44] - 正在点击智能驾驶按钮
+2023-07-18 16:18:08,658 INFO [root] [carcenter_page.py (click_carbody:50] - 正在点击车身设置按钮
+2023-07-18 16:18:14,069 INFO [root] [carcenter_page.py (click_carsettings:56] - 正在点击通用设置按钮
+2023-07-18 16:18:19,424 INFO [root] [carcenter_page.py (click_carabout:62] - 正在点击关于本车按钮
+2023-07-18 16:18:25,434 INFO [root] [test02_change_carcenter.py (test_change_carcenter:40] - 切换车辆Tab栏，更新状态断言成功
+2023-07-18 16:25:13,262 INFO [root] [carcenter_page.py (click_carcenter:20] - 正在点击车辆按钮
+2023-07-18 16:25:14,631 INFO [root] [carcenter_page.py (get_carcenter_txt:26] - 正在获取车辆详情页面状态
+2023-07-18 16:25:15,098 INFO [root] [test01_open_carcenter.py (test_open_carcenter:30] - 打开车辆，更新状态断言成功
+2023-07-18 16:25:25,023 INFO [root] [carcenter_page.py (click_carenergy:32] - 正在点击能量管理按钮
+2023-07-18 16:25:31,529 INFO [root] [carcenter_page.py (click_carexperience:38] - 正在点击驾驶体验按钮
+2023-07-18 16:25:37,775 INFO [root] [carcenter_page.py (click_intelligent_drive:44] - 正在点击智能驾驶按钮
+2023-07-18 16:25:43,578 INFO [root] [carcenter_page.py (click_carbody:50] - 正在点击车身设置按钮
+2023-07-18 16:25:49,762 INFO [root] [carcenter_page.py (click_carsettings:56] - 正在点击通用设置按钮
+2023-07-18 16:25:55,439 INFO [root] [carcenter_page.py (click_carabout:62] - 正在点击关于本车按钮
+2023-07-18 16:26:01,617 INFO [root] [test02_change_carcenter.py (test_change_carcenter:42] - 切换车辆Tab栏，更新状态断言成功
