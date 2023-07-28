@@ -1,0 +1,1 @@
+INFO     root:carcenter_page.py:37 正在点击能量管理按钮

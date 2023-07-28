@@ -4,6 +4,8 @@ from selenium.common.exceptions import TimeoutException, NoSuchElementException
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 import allure
+from subprocess import Popen,PIPE,STDOUT
+import sys
 
 class BaseAction(object):
 
@@ -41,7 +43,6 @@ class BaseAction(object):
 
     def input(self, feature, value, timeout=30.0, poll=1.0):
         """
-        根据特征，先清空，再输入文字
         :param feature: 特征
         :param value: 文字
         :return:
@@ -101,7 +102,7 @@ class BaseAction(object):
         toast_feature = By.XPATH, "//*[contains(@text,'%s')]" % message
         return self.is_feature_exist(toast_feature, timeout, poll)
 
-    def scroll_page_one_time(self, direction="up"):
+    def scroll_page_one_time(self, direction):
         """
         滑动一次屏幕
         :param dir: 滑动的方向
@@ -136,7 +137,7 @@ class BaseAction(object):
         else:
             raise Exception("请输入正确的滑动方向 up/down/left/right")
 
-    def find_element_with_scroll(self, feature, direction="up"):
+    def find_element_with_scroll(self, feature, direction):
         """
         按照 dir 的方向滑动，并且找到 feature 这个特征的元素
         :param dir:
@@ -146,6 +147,7 @@ class BaseAction(object):
             "right"：从左往右
         :return: 找到的元素
         """
+        
         while True:
             try:
                 # 如果找到元素，就点进去
@@ -177,7 +179,6 @@ class BaseAction(object):
 
             if time.time() > end_time:
                 return False
-
             time.sleep(poll)
     # def get_screenshot_as_file(self):
     #     """
@@ -187,7 +188,75 @@ class BaseAction(object):
     #     pic_name = str.split(str(time.time()), '.')[0] + str.split(str(time.time()), '.')[1] + '.png'
     #     screent_path = os.path.join(SCREENSHOTDIR, pic_name)
     #     self.driver.get_screenshot_as_file(screent_path)
-    #     return screent_path
+    #     return screent_pathe
     def screen(self,s):
         if s is not None:
             allure.attach(self.driver.get_screenshot_as_png(), s, allure.attachment_type.PNG)
+    def video(self,s):
+        if s is not None:
+            allure.attach.file("***.mp4",name="{s}",attachment_type=allure.attachment_type.MP4,extension="mp4")
+    # 调起cmd命令
+    def run_cmd(self,cmd):
+        p = Popen(self.cmd,shell=True,stdin=PIPE,stdout=PIPE,stderr=STDOUT)
+        stdout,stderr = p.communicate()
+        return p.returncode,stdout.strip()
+    # 前置条件
+    def initlog(self):
+        cmd1 = 'echo "start1:开启相关权限,by Shirley"'
+        cmd2 = 'adb root'
+        cmd3 = 'adb remount'
+        cmd4 = 'echo "start2:开始初始化抓取蓝牙电话log,by Shirley"'
+        cmd5 = 'adb shell "msg_center_test -t "misc_service/command/qxdm_ondevice_log_request" "{\"command\":\"22\", \"operation\":\"set\", \"id\":\"qxdm_ondevice_log_set\"}""'
+        cmd6 = 'adb shell "ls -l /qlog/ondevice_logging"'
+        cmd7 = 'adb shell "msg_center_test -t "misc_service/command/qxdm_ondevice_log_request" "{\"command\":\"23\", \"operation\":\"set\", \"id\":\"qxdm_ondevice_log_set\"}""'
+        cmd8 = 'echo "start3:开始初始化抓取音频,by Shirley"'
+        cmd9 = 'adb shell setprop vendor.audio.hal.dump_rx true'
+        cmd10 = 'adb shell setprop sys.audio.fw.dump_rx true'
+        cmd11 = 'adb shell setprop sys.audio.fw.dump_tx true'
+        cmd12 = 'echo "start4:删除之前的log,by Shirley'
+        cmd13 = 'adb shell rm /log/android/logcat.log.0*'
+        cmd14 = 'adb shell rm /log/anr/*'
+        cmd15 = 'adb shell rm /log/dropbox/*'
+        cmd16 = 'adb shell rm /log/tombstones/*'
+        self.run_cmd(cmd1 and cmd2 and cmd3 and cmd4 and cmd5 and cmd6 and cmd7 and cmd8
+        and cmd9 and cmd10 and cmd11 and cmd12 and cmd13 and cmd14 and cmd15 and cmd16)
+    
+    def finishedlog(self):
+        cmd1 = 'echo "创建本地存储文件,by Shirley"'
+        cmd2 = 'mkdir "D:/CarLog/"'
+        cmd3 = 'echo "(5)开始导出蓝牙电话log,by Shirley"'
+        cmd4 = 'adb pull /qlog/ondevice_logging D:/CarLog/'
+        cmd5 = 'echo "(6)开始导出音频文件,by Shirley"'
+        cmd6 = 'adb pull /data/vendor/audio D:/CarLog/'
+        cmd7 = 'adb pull /data/misc/audioserver D:/CarLog/'
+        cmd8 = 'echo "(1)开始导出普通log,by Shirley"'
+        cmd9 = 'adb pull /log/android D:/'
+        cmd10 = 'echo "(2)开始导出蓝牙log,by Shirley"'
+        cmd11 = 'adb pull /log/btsnoop D:/CarLog/'
+        cmd12 = 'echo "(3)开始导出卡顿log,by Shirley"'
+        cmd13 = 'adb pull /log/tombstones D:/CarLog/'
+        cmd14 = 'adb pull /log/dropbox D:/CarLog/'
+        cmd15 = 'adb pull /log/anr D:/CarLog/'
+        cmd16 = 'echo "(7)结束音频导出,还原初始态,by Shirley"'
+        cmd17 = 'adb shell setprop vendor.audio.hal.dump_rx false' 
+        cmd18 = 'adb shell setprop sys.audio.fw.dump_rx false'
+        cmd19 = 'adb shell setprop sys.audio.fw.dump_tx false'   
+        self.run_cmd(cmd1 and cmd2 and cmd3 and cmd4 and cmd5 and cmd6 and cmd7 and cmd8
+        and cmd9 and cmd10 and cmd11 and cmd12 and cmd13 and cmd14 and cmd15 and cmd16 
+        and cmd17 and cmd18 and cmd19)
+        
+    def killallapp(self):
+        cmd1 = 'killall com.voyah.car'
+        self.run_cmd(cmd1)
+
+
+
+
+
+
+
+    
+
+
+
+

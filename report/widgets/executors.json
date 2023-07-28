@@ -1,1 +1,1 @@
-[]
+[{"name":"Jenkins","type":"jenkins","url":"http://10.223.60.25:8080/","buildOrder":5,"buildName":"ShirleyWorkspaceTest » ShirleyPytestLocal #5","buildUrl":"http://10.223.60.25:8080/job/ShirleyWorkspaceTest/job/ShirleyPytestLocal/5/","reportName":"AllureReport","reportUrl":"http://10.223.60.25:8080/job/ShirleyWorkspaceTest/job/ShirleyPytestLocal/5/allure"}]

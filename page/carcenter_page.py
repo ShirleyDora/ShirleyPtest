@@ -14,6 +14,11 @@ class CarcenterPage(BaseAction):
     carbody = By.XPATH, "//*[contains(@text,'车身设置')]"
     carsettings = By.XPATH, "//*[contains(@text,'通用设置')]"
     carabout = By.XPATH, "//*[contains(@text,'关于本车')]"
+    
+    @allure.step(title="appcenter页 - 向右滑动屏幕")
+    def swipe_to_right(self):
+        self.scroll_page_one_time("left")
+        self.screen('滑动屏幕')
     # 点击 个人中心图标或文字
     @allure.step(title="车辆页 - 点击 车辆")
     def click_carcenter(self):
